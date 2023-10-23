@@ -8,3 +8,11 @@ body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
 }
+
+#sigma-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

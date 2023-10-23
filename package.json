@@ -24,6 +24,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv-webpack": "^8.0.1",
+    "graphology": "^0.25.4",
+    "graphology-types": "^0.24.7",
+    "sigma": "^3.0.0-alpha3",
     "winston": "^3.8.2"
   },
   "peerDependencies": {},
