@@ -34,6 +34,11 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.glsl$/,
+        exclude: /node_modules/,
+        loader: "raw-loader",
+      },
     ],
   },
   plugins: [
