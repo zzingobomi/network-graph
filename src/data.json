@@ -5,9 +5,55 @@
       "attributes": {
         "x": 0,
         "y": 0,
-        "size": 10,
+        "size": 20,
         "label": "main",
         "color": "#ff0000"
+      }
+    },
+    {
+      "key": "1",
+      "attributes": {
+        "x": 10,
+        "y": 10,
+        "size": 15,
+        "label": "node1",
+        "color": "#00ff00"
+      }
+    },
+    {
+      "key": "2",
+      "attributes": {
+        "x": 3,
+        "y": 6,
+        "size": 10,
+        "label": "node2",
+        "color": "#0000ff"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "key": "0.1",
+      "source": "0",
+      "target": "1",
+      "attributes": {
+        "size": 1
+      }
+    },
+    {
+      "key": "0.2",
+      "source": "0",
+      "target": "2",
+      "attributes": {
+        "size": 1
+      }
+    },
+    {
+      "key": "1.2",
+      "source": "1",
+      "target": "2",
+      "attributes": {
+        "size": 1
       }
     }
   ]

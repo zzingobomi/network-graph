@@ -9,7 +9,14 @@ graph.import(data);
 
 const container = document.getElementById("sigma-container") as HTMLElement;
 
-const fa2Layout = new FA2Layout(graph);
+const sensibleSettings = forceAtlas2.inferSettings(graph);
+const fa2Layout = new FA2Layout(graph, {
+  settings: sensibleSettings,
+});
+
+const addRandomNodeButton = document.getElementById(
+  "add-random-node-btn"
+) as HTMLElement;
 
 const addNodeName = document.getElementById(
   "add-node-name"
@@ -45,6 +52,7 @@ const removeEdgeButton = document.getElementById(
   "remove-edge-btn"
 ) as HTMLElement;
 
+addRandomNodeButton.addEventListener("click", handleAddRandomNode);
 addNodeButton.addEventListener("click", handleAddNode);
 removeNodeButton.addEventListener("click", handleRemoveNode);
 addEdgeButton.addEventListener("click", handleAddEdge);
@@ -52,6 +60,20 @@ removeEdgeButton.addEventListener("click", handleRemoveEdge);
 
 startFA2Button.addEventListener("click", handleStartFA2);
 stopFA2Button.addEventListener("click", handleStopFA2);
+
+function handleAddRandomNode() {
+  const rdName = Math.random().toString(36).substr(2, 11);
+  const rdX = Math.random() * 100;
+  const rdY = Math.random() * 100;
+  const rdSize = Math.random() * 20;
+  graph.addNode(rdName, {
+    x: rdX,
+    y: rdY,
+    size: rdSize,
+    label: rdName,
+    color: "#00ff00",
+  });
+}
 
 function handleAddNode() {
   graph.addNode(addNodeName.value, {
@@ -80,11 +102,11 @@ function handleStopFA2() {
 let cancelCurrentAnimation: (() => void) | null = null;
 
 function stopFA2() {
-  //fa2Layout.stop();
+  fa2Layout.stop();
 }
 function startFA2() {
   if (cancelCurrentAnimation) cancelCurrentAnimation();
-  //fa2Layout.start();
+  fa2Layout.start();
 }
 
 const renderer = new Sigma(graph, container);
