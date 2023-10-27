@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {
+      "key": "0",
+      "attributes": {
+        "x": 0,
+        "y": 0,
+        "size": 10,
+        "label": "main",
+        "color": "#ff0000"
+      }
+    }
+  ]
+}

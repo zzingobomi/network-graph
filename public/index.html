@@ -10,6 +10,53 @@
   </head>
   <body>
     <div id="sigma-container"></div>
+    <div id="input-container">
+      <div class="container">
+        <input id="add-node-name" class="small-input" placeholder="노드이름" />
+        <input id="add-node-x" class="small-input" placeholder="노드x" />
+        <input id="add-node-y" class="small-input" placeholder="노드y" />
+        <input id="add-node-size" class="small-input" placeholder="노드크기" />
+        <button id="add-node-btn" class="small-btn">
+          <span>노드 추가</span>
+        </button>
+      </div>
+
+      <div class="container">
+        <input
+          id="remove-node-name"
+          class="small-input"
+          placeholder="노드이름"
+        />
+        <button id="remove-node-btn" class="small-btn">
+          <span>노드 삭제</span>
+        </button>
+      </div>
+
+      <div class="container">
+        <input id="add-edge-1" class="small-input" placeholder="노드1" />
+        <input id="add-edge-2" class="small-input" placeholder="노드2" />
+        <button id="add-edge-btn" class="small-btn">
+          <span>에지 추가</span>
+        </button>
+      </div>
+
+      <div class="container">
+        <input id="remove-edge-1" class="small-input" placeholder="노드1" />
+        <input id="remove-edge-2" class="small-input" placeholder="노드2" />
+        <button id="remove-edge-btn" class="small-btn">
+          <span>에지 삭제</span>
+        </button>
+      </div>
+
+      <div class="container">
+        <button id="start-fa2-btn" class="small-btn">
+          <span>FA2 시작</span>
+        </button>
+        <button id="stop-fa2-btn" class="small-btn">
+          <span>FA2 중지</span>
+        </button>
+      </div>
+    </div>
     <script src="./js/bundle.js"></script>
   </body>
 </html>
